@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/main.js"></script>
+    <script src="main.js"></script>
+    <link href="app.css" rel="stylesheet" type="text/css"></link>
+    <title>Angular JS Website</title>
+</head>
+
+<body ng-init="names=['rehan', 'rajdeep', 'sandeep', 'aishwarya']">
+    <!-- <ng-include src="'header.html'"></ng-include> -->
+    <header ng-include="'header.html'"></header>
+
+    <!-- <input type="text" ng-model="favGame" placeholder="Enter your favorite game">
+
+    <p>
+        Your favorite game is: {{favGame}} 
+        <br>
+        Employees in webcubic :
+        <ul>
+            <li ng-repeat="name in names">{{name}}</li>
+        </ul>
+    </p> -->
+    <div class="content">
+
+        <div ng-controller="AppController">
+            <!--  <h1>{{message}}</h1> -->
+            <button class="button" ng-click="order = 'name'">Order by name</button>
+            <button class="button"ng-click="order = 'category'">Order by category</button>
+            <!--<ul>
+            <li ng-repeat="employee in employees">{{employee}}</li>
+        </ul> -->
+
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="player in players | orderBy: order | filter: search" ng-show="player.available">
+                    <h3>{{player.name}} - {{player.price | currency: '$'}}</h3>
+                    <button class="remove" ng-click="removeSold(player)">x</button>
+                    <span class="belt" style="background: {{player.skillcolor}}">{{player.category}}</span>
+                </li>
+            </ul>
+            <form ng-submit="addPlayer()">
+                <input type="text" placeholder="Name" ng-model="newplayer.name">
+                <input type="text" placeholder="Category" ng-model="newplayer.category">
+                <input type="text" placeholder="Price" ng-model="newplayer.price">
+                <input type="text" placeholder="Skill color" ng-model="newplayer.skillcolor">
+                <input type="submit" value="Add new player">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
