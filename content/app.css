@@ -53,6 +53,7 @@ main{
 
 .content{
   padding: 20px;
+  overflow: hidden;
 }
 
 .content button,
@@ -112,6 +113,46 @@ main{
   margin: 10px 0;
 }
 
+.profile-pic {
+	position: absolute;
+	z-index: 999;
+	width: 50px;
+  height: 50px;
+  margin: -12px 10px 0 0; 
+  float: left; 
+	background: #FFF;
+	border: 3px solid #FFF;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	top: 0px;
+	position: relative;
+    background:indigo;
+    overflow:hidden;
+    text-align:center;
+}
+
+.profile-pic-center {
+	position: fixed;
+	z-index: 999;
+	width: 50px;
+  height: 50px;
+  margin-left: 47%;
+  margin-right: 60%; 
+  float: left; 
+	background: #FFF;
+	border: 3px solid #FFF;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	top: 0px;
+	position: relative;
+    background:indigo;
+    overflow:hidden;
+    text-align:center;
+}
+
+
 .content input[type="submit"]:last-child{
   width: 150px;
   display: block;
@@ -119,4 +160,42 @@ main{
 }
 
 
- 
+ /*Animations*/
+
+ main.ng-enter {
+   transition: 0.5s linear all;
+   opacity: 0;
+ }
+
+ main.ng-enter.ng-enter-active {
+   opacity: 1;
+ }
+
+ #players_list li.ng-enter{
+   transition: 0.2s linear all;
+   transform: translateY(30px);
+   opacity: 0;
+
+ }
+
+ #players_list li.ng-enter.ng-enter-active {
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ #players_list li.ng-leave{
+  transition: 0.2s linear all;
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
+#players_list li.ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+#players_list li.ng-leave-stagger {
+  transition-delay: 0.2s;
+  transition-duration: 0;
+}

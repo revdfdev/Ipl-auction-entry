@@ -52,7 +52,8 @@ export default StyleSheet.create({
     'borderRadius': '10px'
   },
   'content': {
-    'padding': [{ 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }]
+    'padding': [{ 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }],
+    'overflow': 'hidden'
   },
   'content button': {
     'background': '#fff',
@@ -113,9 +114,76 @@ export default StyleSheet.create({
     'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#ddd' }],
     'margin': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 0 }]
   },
+  'profile-pic': {
+    'position': 'absolute',
+    'zIndex': '999',
+    'width': [{ 'unit': 'px', 'value': 50 }],
+    'height': [{ 'unit': 'px', 'value': 50 }],
+    'margin': [{ 'unit': 'px', 'value': -12 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'float': 'left',
+    'background': '#FFF',
+    'border': [{ 'unit': 'px', 'value': 3 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#FFF' }],
+    'borderRadius': '100px',
+    'WebkitBorderRadius': '100px',
+    'MozBorderRadius': '100px',
+    'top': [{ 'unit': 'px', 'value': 0 }],
+    'position': 'relative',
+    'background': 'indigo',
+    'overflow': 'hidden',
+    'textAlign': 'center'
+  },
+  'profile-pic-center': {
+    'position': 'fixed',
+    'zIndex': '999',
+    'width': [{ 'unit': 'px', 'value': 50 }],
+    'height': [{ 'unit': 'px', 'value': 50 }],
+    'marginLeft': [{ 'unit': '%H', 'value': 0.47 }],
+    'marginRight': [{ 'unit': '%H', 'value': 0.6 }],
+    'float': 'left',
+    'background': '#FFF',
+    'border': [{ 'unit': 'px', 'value': 3 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#FFF' }],
+    'borderRadius': '100px',
+    'WebkitBorderRadius': '100px',
+    'MozBorderRadius': '100px',
+    'top': [{ 'unit': 'px', 'value': 0 }],
+    'position': 'relative',
+    'background': 'indigo',
+    'overflow': 'hidden',
+    'textAlign': 'center'
+  },
   'content input[type="submit"]:last-child': {
     'width': [{ 'unit': 'px', 'value': 150 }],
     'display': 'block',
     'margin': [{ 'unit': 'px', 'value': 15 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 15 }, { 'unit': 'string', 'value': 'auto' }]
+  },
+  // Animations
+  'mainng-enter': {
+    'transition': '0.5s linear all',
+    'opacity': '0'
+  },
+  'mainng-enterng-enter-active': {
+    'opacity': '1'
+  },
+  '#players_list ling-enter': {
+    'transition': '0.2s linear all',
+    'transform': 'translateY(30px)',
+    'opacity': '0'
+  },
+  '#players_list ling-enterng-enter-active': {
+    'opacity': '1',
+    'transform': 'translateY(0)'
+  },
+  '#players_list ling-leave': {
+    'transition': '0.2s linear all',
+    'transform': 'translateX(0)',
+    'opacity': '1'
+  },
+  '#players_list ling-leaveng-leave-active': {
+    'opacity': '0',
+    'transform': 'translateX(-100%)'
+  },
+  '#players_list ling-leave-stagger': {
+    'transitionDelay': '0.2s',
+    'transitionDuration': '0'
   }
 });

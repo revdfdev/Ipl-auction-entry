@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Kohli",
+        "category": "Batsman",
+        "price": 300000,
+        "available": true,
+        "skillcolor": "red",
+        "img": "../content/img/virat.jpg"
+    },
+    {
+        "name": "Bhuvaneshwar kumar",
+        "category": "Bowler",
+        "price": 3500,
+        "available": true,
+        "skillcolor": "orange",
+        "img": "../content/img/bhuvi.jpg"
+    },
+    {
+        "name": "Dhoni",
+        "category": "Batsman",
+        "price": 450000,
+        "available": true,
+        "skillcolor": "green",
+        "img": "../content/img/dhoni.jpg"
+    },
+    {
+        "name": "Ishant Sharma",
+        "category": "Bowler",
+        "price": 2100,
+        "available": true,
+        "skillcolor": "blue",
+        "img": "../content/img/ishant.jpg"
+    }
+]

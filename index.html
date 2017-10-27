@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/main.js"></script>
+    <script src="main.js"></script>
+    <link href="content/app.css" rel="stylesheet" type="text/css"></link>
+    <title>Angular JS Website</title>
+</head>
+
+<body>
+    <!-- <ng-include src="'header.html'"></ng-include> -->
+    <header ng-include="'header.html'"></header>
+    <main ng-view></main>
+
+    <!-- <input type="text" ng-model="favGame" placeholder="Enter your favorite game">
+
+    <p>
+        Your favorite game is: {{favGame}} 
+        <br>
+        Employees in webcubic :
+        <ul>
+            <li ng-repeat="name in names">{{name}}</li>
+        </ul>
+    </p> -->
+    
+</body>
+
+</html>
