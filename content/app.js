@@ -185,5 +185,12 @@ export default StyleSheet.create({
   '#players_list ling-leave-stagger': {
     'transitionDelay': '0.2s',
     'transitionDuration': '0'
+  },
+  'inputng-invalidng-touched': {
+    'border': [{ 'unit': 'px', 'value': 3 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': 'red' }]
+  },
+  'input[disabled="disabled"]': {
+    'opacity': '0.4',
+    'cursor': 'not-allowed !important'
   }
 });

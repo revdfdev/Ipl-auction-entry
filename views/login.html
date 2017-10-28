@@ -1,0 +1,23 @@
+<div class="content">
+    <form name="loginform" novalidate>
+        <h1 style="text-align: center; color: indigo">Login</h1>
+        <br/>
+        <input type="email" placeholder="Email" name="email" ng-model="login.email" ng-required="true" />
+        <div ng-show="loginform.email.$touched && loginform.email.$invalid">
+            <small style="color: red; display: block; text-align: center" >Enter a valid email</small>
+        </div>
+        <!--  <span>
+            $pristine - {{loginform.email.$pristine}},
+            $dirty - {{loginform.email.$dirty}},
+            $untouched - {{loginform.email.$untouched}},
+            $touched - {{loginform.email.$touched}},
+            $invalid - {{loginform.email.$invalid}},
+            $valid - {{loginform.email.$valid}}
+        </span> -->
+        <input type="password" placeholder="Password" name="password" ng-model="login.password" ng-required="true" />
+        <div ng-show="loginform.password.$touched && loginform.password.$invalid">
+                <small style="color: red; display: block; text-align: center" >Enter a valid Password</small>
+            </div>
+        <input type="submit" value="Login" ng-click="showMessage()" ng-disabled="loginform.$invalid" />
+    </form>
+</div>
